@@ -1,0 +1,127 @@
+{
+  "parametres": {
+    "afficher_intentions": true,
+    "afficher_carnet": true,
+    "duree_carnet_jours": 45,
+    "duree_annonce_defaut_jours": 21,
+    "expediteurs_autorises": [
+      "patrice.valantin@reizhan.bzh",
+      "dervennbio@gmail.com",
+      "staubindaubigne.site@gmail.com",
+      "paroisse-saint-aubin-illet@orange.fr"
+    ]
+  },
+
+  "mise_a_jour": {
+    "date": "2026-10-24",
+    "source": "feuille paroissiale du dimanche 18 octobre 2026 et horaires publiés sur messes.info"
+  },
+
+  "lieux": {
+    "Saint-Aubin-d'Aubigné": "église Saint-Aubin",
+    "Saint-Aubin-d'Aubigné (EHPAD)": "EHPAD",
+    "Andouillé-Neuville": "église Saint-Melaine",
+    "Aubigné": "église de la Présentation-de-la-Sainte-Vierge",
+    "Chasné-sur-Illet": "église Saint-Martin-de-Tours",
+    "Feins": "église Saint-Martin-de-Tours",
+    "Gahard": "église Saint-Exupère",
+    "Guipel": "église Saint-Martin-de-Tours",
+    "Montreuil-sur-Ille": "église Saint-Pierre-et-Saint-Paul",
+    "Mouazé": "église Saint-Melaine",
+    "Saint-Germain-sur-Ille": "église Saint-Germain",
+    "Saint-Médard-sur-Ille": "église Saint-Médard",
+    "Sens-de-Bretagne": "église Saint-Sulpice",
+    "Sens-de-Bretagne (EHPAD)": "EHPAD",
+    "Sens-de-Bretagne (oratoire)": "oratoire",
+    "Vieux-Vy-sur-Couesnon": "église Saint-Germain"
+  },
+
+  "jours": [
+    {"date": "2026-10-24", "libelle": "Messe anticipée du dimanche"},
+    {"date": "2026-10-25", "libelle": "30e dimanche du temps ordinaire"},
+    {"date": "2026-11-01", "libelle": "Toussaint"},
+    {"date": "2026-11-11", "libelle": "Armistice"}
+  ],
+
+  "messes": [
+    {"date": "2026-10-24", "heure": "18:30", "lieu": "Chasné-sur-Illet", "intentions": ["Intentions du dimanche"]},
+    {"date": "2026-10-25", "heure": "09:00", "lieu": "Vieux-Vy-sur-Couesnon", "intentions": ["Intentions du dimanche"]},
+    {"date": "2026-10-25", "heure": "10:30", "lieu": "Saint-Aubin-d'Aubigné", "intentions": []},
+    {"date": "2026-11-01", "heure": "15:00", "lieu": "Dans la plupart des communes", "nature": "Célébration de la Parole suivie de la procession au cimetière", "intentions": []},
+    {"date": "2026-11-11", "heure": "10:00", "lieu": "Sens-de-Bretagne", "nature": "Messe de commémoration de l'Armistice", "intentions": []}
+  ],
+
+  "annonces": [
+    {
+      "id": "chapelet-sens",
+      "titre": "Prière du chapelet",
+      "texte": "Chaque mardi à 18 h à Sens-de-Bretagne, ouverte à tous.",
+      "date_fin": "2026-12-31",
+      "source": "feuille"
+    },
+    {
+      "id": "octobre-paix",
+      "titre": "Octobre : prier pour la paix",
+      "texte": "Pendant le mois du Rosaire, le pape invite à prier le chapelet avec l'intention particulière que cessent les guerres et que la paix s'instaure entre les peuples en conflit. Chapelet le dimanche à 9 h 55 à l'église de Saint-Aubin, avant la messe.",
+      "date_fin": "2026-10-31",
+      "source": "feuille"
+    },
+    {
+      "id": "annee-appel",
+      "titre": "Année de l'Appel 2026-2027",
+      "texte": "« Viens, suis-moi ! » Le diocèse invite à prier pour les vocations sacerdotales et religieuses. Un kit de prière est à disposition, à prendre et à remettre à chaque messe dominicale.",
+      "date_fin": "2027-06-30",
+      "source": "feuille"
+    }
+  ],
+
+  "carnet": {
+    "baptemes": [
+      {"noms": "Tom et Alba Cantarel", "date": "2026-10-10", "lieu": "Vieux-Vy-sur-Couesnon"},
+      {"noms": "Pablo Valtais et Paul Berthelot", "date": "2026-10-11", "lieu": "Saint-Aubin-d'Aubigné"}
+    ],
+    "mariages": [
+      {"noms": "Thomas Chevrie et Maëlys Grall", "date": "2026-10-10", "lieu": "Saint-Aubin-d'Aubigné"}
+    ],
+    "obseques": [
+      {"noms": "Alain Bretel", "date": "2026-10-06", "lieu": "Aubigné"},
+      {"noms": "Louise Robert, née Croizé", "date": "2026-10-07", "lieu": "Montreuil-sur-Ille"}
+    ]
+  },
+
+  "presentation": {
+    "accroche": "Treize clochers entre Ille et Couesnon, autour de Saint-Aubin-d'Aubigné. Horaires des messes, annonces et vie paroissiale, mis à jour chaque semaine.",
+    "texte": "La paroisse Saint-Aubin de l'Illet, du doyenné de la Trinité (diocèse de Rennes), réunit treize communes du nord du pays rennais, entre les vallées de l'Ille et du Couesnon. Son presbytère est situé à Saint-Aubin-d'Aubigné.",
+    "clochers": [
+      "Saint-Aubin-d'Aubigné", "Andouillé-Neuville", "Aubigné", "Chasné-sur-Illet",
+      "Feins", "Gahard", "Guipel", "Montreuil-sur-Ille", "Mouazé",
+      "Saint-Germain-sur-Ille", "Saint-Médard-sur-Ille", "Sens-de-Bretagne",
+      "Vieux-Vy-sur-Couesnon"
+    ]
+  },
+
+  "vie_paroissiale": [
+    {
+      "id": "pastorale-jeunes",
+      "titre": "Pastorale des jeunes",
+      "texte": "Week-ends et rassemblements pour les collégiens (TIM pour les 6e, CAP pour les 5e à 3e). Contact : Maëva, 07 82 38 98 96."
+    },
+    {
+      "id": "panier-cure",
+      "titre": "Le panier du curé",
+      "texte": "Service paroissial permettant aux paroissiens, sur inscription préalable, de préparer à tour de rôle un panier-repas les lundis et vendredis. Contact : Chantale, 06 24 21 26 39."
+    },
+    {
+      "id": "dons-legs",
+      "titre": "Dons et legs",
+      "texte": "Léguer à l'Église, c'est lui donner les moyens matériels de poursuivre ses missions. Des dépliants sont à disposition dans les églises et chapelles."
+    }
+  ],
+
+  "contact": {
+    "accueil": "Lundi, mardi, mercredi et vendredi, de 10 h à 12 h",
+    "adresse": "9 rue du Château d'Eau, 35250 Saint-Aubin-d'Aubigné",
+    "telephone": "02 99 55 21 50",
+    "courriel": "paroisse-saint-aubin-illet@orange.fr"
+  }
+}
