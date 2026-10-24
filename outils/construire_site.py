@@ -172,6 +172,8 @@ def main():
         section_messes(base, auj), section_annonces(base, auj), carnet,
         section_paroisse(base), section_vie(base), section_contact(base)]))
     page = MODELE.read_text(encoding="utf-8")
+    bandeau = base["parametres"].get("bandeau")
+    page = page.replace("{{BANDEAU}}", f'<div class="demo">{e(bandeau)}</div>' if bandeau else "")
     page = (page.replace("{{ACCROCHE}}", e(base["presentation"]["accroche"]))
                 .replace("{{NAV_CARNET}}", '<a href="#carnet">Carnet</a>' if carnet else "")
                 .replace("{{SECTIONS}}", sections)

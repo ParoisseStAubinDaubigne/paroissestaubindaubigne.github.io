@@ -9,14 +9,13 @@
       "dervennbio@gmail.com",
       "staubindaubigne.site@gmail.com",
       "paroisse-saint-aubin-illet@orange.fr"
-    ]
+    ],
+    "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales d'octobre 2026 et de messes.info."
   },
-
   "mise_a_jour": {
     "date": "2026-10-24",
     "source": "feuille paroissiale du dimanche 18 octobre 2026 et horaires publiés sur messes.info"
   },
-
   "lieux": {
     "Saint-Aubin-d'Aubigné": "église Saint-Aubin",
     "Saint-Aubin-d'Aubigné (EHPAD)": "EHPAD",
@@ -35,22 +34,217 @@
     "Sens-de-Bretagne (oratoire)": "oratoire",
     "Vieux-Vy-sur-Couesnon": "église Saint-Germain"
   },
-
   "jours": [
-    {"date": "2026-10-24", "libelle": "Messe anticipée du dimanche"},
-    {"date": "2026-10-25", "libelle": "30e dimanche du temps ordinaire"},
-    {"date": "2026-11-01", "libelle": "Toussaint"},
-    {"date": "2026-11-11", "libelle": "Armistice"}
+    {
+      "date": "2026-10-24",
+      "libelle": "Messe anticipée du dimanche"
+    },
+    {
+      "date": "2026-10-25",
+      "libelle": "30e dimanche du temps ordinaire"
+    },
+    {
+      "date": "2026-10-31",
+      "libelle": "Messe anticipée de la Toussaint"
+    },
+    {
+      "date": "2026-11-01",
+      "libelle": "Toussaint"
+    },
+    {
+      "date": "2026-11-07",
+      "libelle": "Messe anticipée du dimanche"
+    },
+    {
+      "date": "2026-11-08",
+      "libelle": "32e dimanche du temps ordinaire"
+    },
+    {
+      "date": "2026-11-11",
+      "libelle": "Armistice"
+    },
+    {
+      "date": "2026-11-14",
+      "libelle": "Messe anticipée du dimanche"
+    },
+    {
+      "date": "2026-11-15",
+      "libelle": "33e dimanche du temps ordinaire"
+    },
+    {
+      "date": "2026-11-21",
+      "libelle": "Messe anticipée du Christ Roi de l'univers"
+    }
   ],
-
   "messes": [
-    {"date": "2026-10-24", "heure": "18:30", "lieu": "Chasné-sur-Illet", "intentions": ["Intentions du dimanche"]},
-    {"date": "2026-10-25", "heure": "09:00", "lieu": "Vieux-Vy-sur-Couesnon", "intentions": ["Intentions du dimanche"]},
-    {"date": "2026-10-25", "heure": "10:30", "lieu": "Saint-Aubin-d'Aubigné", "intentions": []},
-    {"date": "2026-11-01", "heure": "15:00", "lieu": "Dans la plupart des communes", "nature": "Célébration de la Parole suivie de la procession au cimetière", "intentions": []},
-    {"date": "2026-11-11", "heure": "10:00", "lieu": "Sens-de-Bretagne", "nature": "Messe de commémoration de l'Armistice", "intentions": []}
+    {
+      "date": "2026-10-24",
+      "heure": "18:30",
+      "lieu": "Chasné-sur-Illet",
+      "intentions": [
+        "Intentions du dimanche"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "heure": "09:00",
+      "lieu": "Vieux-Vy-sur-Couesnon",
+      "intentions": [
+        "Intentions du dimanche"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "heure": "10:30",
+      "lieu": "Saint-Aubin-d'Aubigné",
+      "intentions": []
+    },
+    {
+      "date": "2026-10-31",
+      "heure": "18:30",
+      "lieu": "Saint-Germain-sur-Ille",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "10:30",
+      "lieu": "Saint-Aubin-d'Aubigné",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Andouillé-Neuville",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Aubigné",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Chasné-sur-Illet",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Feins",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Gahard",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Guipel",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Montreuil-sur-Ille",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Mouazé",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Saint-Aubin-d'Aubigné",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Saint-Germain-sur-Ille",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Saint-Médard-sur-Ille",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-01",
+      "heure": "15:00",
+      "lieu": "Sens-de-Bretagne",
+      "intentions": [],
+      "nature": "Célébration de la Parole suivie de la procession au cimetière"
+    },
+    {
+      "date": "2026-11-07",
+      "heure": "18:30",
+      "lieu": "Saint-Médard-sur-Ille",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-08",
+      "heure": "09:00",
+      "lieu": "Feins",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-08",
+      "heure": "10:30",
+      "lieu": "Saint-Aubin-d'Aubigné",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-11",
+      "heure": "10:00",
+      "lieu": "Sens-de-Bretagne",
+      "intentions": [],
+      "nature": "Messe de commémoration de l'Armistice"
+    },
+    {
+      "date": "2026-11-14",
+      "heure": "18:30",
+      "lieu": "Sens-de-Bretagne",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-15",
+      "heure": "09:00",
+      "lieu": "Gahard",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-15",
+      "heure": "10:30",
+      "lieu": "Saint-Aubin-d'Aubigné",
+      "intentions": []
+    },
+    {
+      "date": "2026-11-21",
+      "heure": "18:30",
+      "lieu": "Andouillé-Neuville",
+      "intentions": []
+    }
   ],
-
   "annonces": [
     {
       "id": "chapelet-sens",
@@ -74,32 +268,58 @@
       "source": "feuille"
     }
   ],
-
   "carnet": {
     "baptemes": [
-      {"noms": "Tom et Alba Cantarel", "date": "2026-10-10", "lieu": "Vieux-Vy-sur-Couesnon"},
-      {"noms": "Pablo Valtais et Paul Berthelot", "date": "2026-10-11", "lieu": "Saint-Aubin-d'Aubigné"}
+      {
+        "noms": "Tom et Alba Cantarel",
+        "date": "2026-10-10",
+        "lieu": "Vieux-Vy-sur-Couesnon"
+      },
+      {
+        "noms": "Pablo Valtais et Paul Berthelot",
+        "date": "2026-10-11",
+        "lieu": "Saint-Aubin-d'Aubigné"
+      }
     ],
     "mariages": [
-      {"noms": "Thomas Chevrie et Maëlys Grall", "date": "2026-10-10", "lieu": "Saint-Aubin-d'Aubigné"}
+      {
+        "noms": "Thomas Chevrie et Maëlys Grall",
+        "date": "2026-10-10",
+        "lieu": "Saint-Aubin-d'Aubigné"
+      }
     ],
     "obseques": [
-      {"noms": "Alain Bretel", "date": "2026-10-06", "lieu": "Aubigné"},
-      {"noms": "Louise Robert, née Croizé", "date": "2026-10-07", "lieu": "Montreuil-sur-Ille"}
+      {
+        "noms": "Alain Bretel",
+        "date": "2026-10-06",
+        "lieu": "Aubigné"
+      },
+      {
+        "noms": "Louise Robert, née Croizé",
+        "date": "2026-10-07",
+        "lieu": "Montreuil-sur-Ille"
+      }
     ]
   },
-
   "presentation": {
     "accroche": "Treize clochers entre Ille et Couesnon, autour de Saint-Aubin-d'Aubigné. Horaires des messes, annonces et vie paroissiale, mis à jour chaque semaine.",
     "texte": "La paroisse Saint-Aubin de l'Illet, du doyenné de la Trinité (diocèse de Rennes), réunit treize communes du nord du pays rennais, entre les vallées de l'Ille et du Couesnon. Son presbytère est situé à Saint-Aubin-d'Aubigné.",
     "clochers": [
-      "Saint-Aubin-d'Aubigné", "Andouillé-Neuville", "Aubigné", "Chasné-sur-Illet",
-      "Feins", "Gahard", "Guipel", "Montreuil-sur-Ille", "Mouazé",
-      "Saint-Germain-sur-Ille", "Saint-Médard-sur-Ille", "Sens-de-Bretagne",
+      "Saint-Aubin-d'Aubigné",
+      "Andouillé-Neuville",
+      "Aubigné",
+      "Chasné-sur-Illet",
+      "Feins",
+      "Gahard",
+      "Guipel",
+      "Montreuil-sur-Ille",
+      "Mouazé",
+      "Saint-Germain-sur-Ille",
+      "Saint-Médard-sur-Ille",
+      "Sens-de-Bretagne",
       "Vieux-Vy-sur-Couesnon"
     ]
   },
-
   "vie_paroissiale": [
     {
       "id": "pastorale-jeunes",
@@ -117,7 +337,6 @@
       "texte": "Léguer à l'Église, c'est lui donner les moyens matériels de poursuivre ses missions. Des dépliants sont à disposition dans les églises et chapelles."
     }
   ],
-
   "contact": {
     "accueil": "Lundi, mardi, mercredi et vendredi, de 10 h à 12 h",
     "adresse": "9 rue du Château d'Eau, 35250 Saint-Aubin-d'Aubigné",
