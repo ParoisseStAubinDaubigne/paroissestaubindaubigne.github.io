@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Paroisse Saint-Aubin de l'Illet (Saint-Aubin-d'Aubigné, diocèse de Rennes) : horaires des messes, annonces, carnet paroissial et contacts.">
+<title>Paroisse Saint-Aubin de l'Illet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+img{max-width:100%}
+/* Layout : page verticale sobre, bandes pleine largeur, contenu centré à 960px.
+   Palette granit breton + bleu vitrail, accent doré discret. */
+:root{
+  --bg:#f4f4f1;
+  --paper:#ffffff;
+  --ink:#23282e;
+  --muted:#5b6370;
+  --line:#dcdcd4;
+  --blue:#24416e;
+  --blue-soft:#e8edf5;
+  --gold:#a07c2e;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Source Sans 3",system-ui,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15181d; --paper:#1d2127; --ink:#e8e6e0; --muted:#a3a9b4;
+    --line:#333943; --blue:#8fa9d6; --blue-soft:#232c3b; --gold:#c9a45c;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15181d; --paper:#1d2127; --ink:#e8e6e0; --muted:#a3a9b4;
+  --line:#333943; --blue:#8fa9d6; --blue-soft:#232c3b; --gold:#c9a45c;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15}
+a{color:var(--blue)}
+.demo{background:var(--gold);color:#fff;text-align:center;font-size:.85rem;padding:.35rem 1rem}
+/* ---- entête ---- */
+header.hero{background:var(--blue-soft);border-bottom:1px solid var(--line)}
+header.hero .wrap{padding-block:2.6rem 2.2rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--gold);font-weight:700}
+header.hero h1{font-size:clamp(1.9rem,5.5vw,3rem);margin:.3rem 0 .4rem;color:var(--blue);font-weight:600}
+header.hero p{max-width:34em;margin:0;color:var(--muted)}
+/* ---- navigation ---- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;gap:1.4rem;overflow-x:auto;padding-block:.65rem;white-space:nowrap}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem}
+/* ---- sections ---- */
+section .wrap{padding-block:2.4rem}
+section h2{font-size:1.55rem;color:var(--blue);margin:0 0 .35rem}
+.lede{color:var(--muted);margin:0 0 1.4rem;max-width:40em}
+section + section{border-top:1px solid var(--line)}
+section:nth-of-type(even){background:var(--paper)}
+/* ---- messes ---- */
+.jour{display:grid;grid-template-columns:9.5rem 1fr;gap:0 1.2rem;padding:.9rem 0;border-top:1px solid var(--line)}
+.jour:first-of-type{border-top:none}
+.jour .date{font-weight:700;color:var(--blue)}
+.jour .date small{display:block;font-weight:400;color:var(--muted)}
+.cel{margin:0 0 .4rem}
+.cel .h{font-variant-numeric:tabular-nums;font-weight:600}
+.cel .lieu{font-weight:600}
+.cel .intentions{display:block;color:var(--muted);font-size:.93rem}
+.note-maj{background:var(--blue-soft);border-left:3px solid var(--blue);padding:.7rem 1rem;font-size:.93rem;color:var(--muted);margin-top:1.3rem}
+@media (max-width:540px){.jour{grid-template-columns:1fr}.jour .date{margin-bottom:.2rem}}
+/* ---- annonces ---- */
+.annonces{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:0;padding:0;list-style:none}
+.annonces li{background:var(--paper);border:1px solid var(--line);padding:1rem 1.1rem}
+section:nth-of-type(even) .annonces li{background:var(--bg)}
+.annonces h3{margin:0 0 .3rem;font-size:1.08rem}
+.annonces p{margin:0;font-size:.95rem;color:var(--muted)}
+/* ---- carnet ---- */
+.carnet{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.carnet h3{margin:0 0 .5rem;font-size:1.05rem;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.carnet ul{margin:0;padding:0;list-style:none}
+.carnet li{padding:.35rem 0;border-top:1px solid var(--line);font-size:.97rem}
+.carnet li small{color:var(--muted);display:block}
+/* ---- clochers ---- */
+.clochers{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));margin-top:1.2rem;padding:0;list-style:none}
+.clochers li{border:1px solid var(--line);background:var(--paper);padding:.6rem .9rem;font-size:.93rem}
+section:nth-of-type(even) .clochers li{background:var(--bg)}
+.clochers b{display:block;color:var(--blue)}
+.clochers span{color:var(--muted)}
+/* ---- contact ---- */
+.contact{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.contact h3{margin:0 0 .3rem;font-size:1.05rem}
+.contact p{margin:0;color:var(--muted)}
+.contact .val{color:var(--ink);font-weight:600}
+footer{background:var(--blue);color:#f0f2f6}
+:root[data-theme="dark"] footer, body footer{/* token-safe */}
+footer .wrap{padding-block:1.6rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between}
+footer a{color:#f0f2f6}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Diocèse de Rennes · Doyenné de la Trinité</div>
+    <h1>Paroisse Saint-Aubin de l'Illet</h1>
+    <p>Treize clochers entre Ille et Couesnon, autour de Saint-Aubin-d'Aubigné. Horaires des messes, annonces et vie paroissiale, mis à jour chaque semaine.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#messes">Messes</a>
+    <a href="#annonces">Annonces</a>
+    <a href="#carnet">Carnet</a>
+    <a href="#paroisse">La paroisse</a>
+    <a href="#vie">Vie paroissiale</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="messes">
+  <div class="wrap">
+    <h2>Messes et célébrations</h2>
+    <p class="lede">Horaires des prochains jours. Les intentions de messe sont publiées à réception de la feuille paroissiale hebdomadaire.</p>
+
+    <div class="jour">
+      <div class="date">Samedi 24 octobre<small>Messe anticipée</small></div>
+      <div>
+        <p class="cel"><span class="h">18 h 30</span> — <span class="lieu">Chasné-sur-Illet</span>, église Saint-Martin-de-Tours
+        <span class="intentions">Intentions du dimanche</span></p>
+      </div>
+    </div>
+
+    <div class="jour">
+      <div class="date">Dimanche 25 octobre<small>30ᵉ dimanche du temps ordinaire</small></div>
+      <div>
+        <p class="cel"><span class="h">9 h 00</span> — <span class="lieu">Vieux-Vy-sur-Couesnon</span>, église Saint-Germain
+        <span class="intentions">Intentions du dimanche</span></p>
+        <p class="cel"><span class="h">10 h 30</span> — <span class="lieu">Saint-Aubin-d'Aubigné</span>, église Saint-Aubin
+        <span class="intentions">Intentions publiées avec la feuille de messe de la semaine</span></p>
+      </div>
+    </div>
+
+    <div class="jour">
+      <div class="date">Dimanche 1ᵉʳ novembre<small>Toussaint</small></div>
+      <div>
+        <p class="cel"><span class="h">15 h 00</span> — <span class="lieu">Dans la plupart des communes</span>
+        <span class="intentions">Célébration de la Parole suivie de la procession au cimetière</span></p>
+      </div>
+    </div>
+
+    <div class="jour">
+      <div class="date">Mercredi 11 novembre<small>Armistice</small></div>
+      <div>
+        <p class="cel"><span class="h">10 h 00</span> — <span class="lieu">Sens-de-Bretagne</span>, église Saint-Sulpice
+        <span class="intentions">Messe de commémoration de l'Armistice</span></p>
+      </div>
+    </div>
+
+    <div class="note-maj">Dernière mise à jour : feuille paroissiale du dimanche 18 octobre 2026. La feuille complète est disponible à l'accueil du presbytère et au fond des églises.</div>
+  </div>
+</section>
+
+<section id="annonces">
+  <div class="wrap">
+    <h2>Annonces</h2>
+    <p class="lede">La vie de la paroisse cette semaine.</p>
+    <ul class="annonces">
+      <li>
+        <h3>Prière du chapelet</h3>
+        <p>Chaque mardi à 18 h à Sens-de-Bretagne, ouverte à tous. Pendant le mois du Rosaire, chapelet également le dimanche à 9 h 55 à l'église de Saint-Aubin, avant la messe.</p>
+      </li>
+      <li>
+        <h3>Octobre : prier pour la paix</h3>
+        <p>Le pape invite à prier le chapelet avec l'intention particulière que cessent les guerres et que la paix s'instaure entre les peuples en conflit.</p>
+      </li>
+      <li>
+        <h3>Année de l'Appel 2026-2027</h3>
+        <p>« Viens, suis-moi ! » Le diocèse invite à prier pour les vocations sacerdotales et religieuses. Un kit de prière est à disposition, à prendre et à remettre à chaque messe dominicale.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="carnet">
+  <div class="wrap">
+    <h2>Carnet paroissial</h2>
+    <p class="lede">Baptêmes, mariages et obsèques célébrés dans la paroisse.</p>
+    <div class="carnet">
+      <div>
+        <h3>Baptêmes</h3>
+        <ul>
+          <li>Tom et Alba Cantarel<small>le 10 octobre à Vieux-Vy-sur-Couesnon</small></li>
+          <li>Pablo Valtais et Paul Berthelot<small>le 11 octobre à Saint-Aubin</small></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mariages</h3>
+        <ul>
+          <li>Thomas Chevrie et Maëlys Grall<small>le 10 octobre à Saint-Aubin</small></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Obsèques</h3>
+        <ul>
+          <li>Alain Bretel<small>le 6 octobre à Aubigné</small></li>
+          <li>Louise Robert, née Croizé<small>le 7 octobre à Montreuil-sur-Ille</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="paroisse">
+  <div class="wrap">
+    <h2>La paroisse</h2>
+    <p class="lede">La paroisse Saint-Aubin de l'Illet, du doyenné de la Trinité (diocèse de Rennes), réunit treize communes du nord du pays rennais, entre les vallées de l'Ille et du Couesnon. Son presbytère est situé à Saint-Aubin-d'Aubigné.</p>
+    <ul class="clochers">
+      <li><b>Saint-Aubin-d'Aubigné</b><span>Église Saint-Aubin</span></li>
+      <li><b>Andouillé-Neuville</b><span>Église Saint-Melaine</span></li>
+      <li><b>Aubigné</b><span>Église de la Présentation-de-la-Sainte-Vierge</span></li>
+      <li><b>Chasné-sur-Illet</b><span>Église Saint-Martin-de-Tours</span></li>
+      <li><b>Feins</b><span>Église Saint-Martin-de-Tours</span></li>
+      <li><b>Gahard</b><span>Église Saint-Exupère</span></li>
+      <li><b>Guipel</b><span>Église Saint-Martin-de-Tours</span></li>
+      <li><b>Montreuil-sur-Ille</b><span>Église Saint-Pierre-et-Saint-Paul</span></li>
+      <li><b>Mouazé</b><span>Église Saint-Melaine</span></li>
+      <li><b>Saint-Germain-sur-Ille</b><span>Église Saint-Germain</span></li>
+      <li><b>Saint-Médard-sur-Ille</b><span>Église Saint-Médard</span></li>
+      <li><b>Sens-de-Bretagne</b><span>Église Saint-Sulpice</span></li>
+      <li><b>Vieux-Vy-sur-Couesnon</b><span>Église Saint-Germain</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="vie">
+  <div class="wrap">
+    <h2>Vie paroissiale</h2>
+    <ul class="annonces">
+      <li>
+        <h3>Pastorale des jeunes</h3>
+        <p>Week-ends et rassemblements pour les collégiens (TIM pour les 6ᵉ, CAP pour les 5ᵉ-3ᵉ). Contact : Maëva, 07 82 38 98 96.</p>
+      </li>
+      <li>
+        <h3>Le panier du curé</h3>
+        <p>Service paroissial permettant aux paroissiens, sur inscription préalable, de préparer à tour de rôle un panier-repas les lundis et vendredis. Contact : Chantale, 06 24 21 26 39.</p>
+      </li>
+      <li>
+        <h3>Dons et legs</h3>
+        <p>Léguer à l'Église, c'est lui donner les moyens matériels de poursuivre ses missions. Des dépliants sont à disposition dans les églises et chapelles.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact et accueil</h2>
+    <div class="contact">
+      <div>
+        <h3>Accueil au presbytère</h3>
+        <p>Lundi, mardi, mercredi et vendredi,<br>de <span class="val">10 h à 12 h</span></p>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p class="val">9 rue du Château d'Eau<br>35250 Saint-Aubin-d'Aubigné</p>
+      </div>
+      <div>
+        <h3>Téléphone &amp; courriel</h3>
+        <p><span class="val">02 99 55 21 50</span><br><span class="val">paroisse-saint-aubin-illet@orange.fr</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Paroisse Saint-Aubin de l'Illet — Diocèse de Rennes</div>
+    <div>Site en cours de construction</div>
+  </div>
+</footer>
+
+</body>
+</html>
