@@ -36,10 +36,6 @@
   },
   "jours": [
     {
-      "date": "2026-10-24",
-      "libelle": "Messe anticipée du dimanche"
-    },
-    {
       "date": "2026-10-25",
       "libelle": "30e dimanche du temps ordinaire"
     },
@@ -77,14 +73,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-10-24",
-      "heure": "18:30",
-      "lieu": "Chasné-sur-Illet",
-      "intentions": [
-        "Intentions du dimanche"
-      ]
-    },
     {
       "date": "2026-10-25",
       "heure": "09:00",
