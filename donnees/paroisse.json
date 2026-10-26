@@ -36,10 +36,6 @@
   },
   "jours": [
     {
-      "date": "2026-10-25",
-      "libelle": "30e dimanche du temps ordinaire"
-    },
-    {
       "date": "2026-10-31",
       "libelle": "Messe anticipée de la Toussaint"
     },
@@ -73,20 +69,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-10-25",
-      "heure": "09:00",
-      "lieu": "Vieux-Vy-sur-Couesnon",
-      "intentions": [
-        "Intentions du dimanche"
-      ]
-    },
-    {
-      "date": "2026-10-25",
-      "heure": "10:30",
-      "lieu": "Saint-Aubin-d'Aubigné",
-      "intentions": []
-    },
     {
       "date": "2026-10-31",
       "heure": "18:30",
