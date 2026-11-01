@@ -36,10 +36,6 @@
   },
   "jours": [
     {
-      "date": "2026-10-31",
-      "libelle": "Messe anticipée de la Toussaint"
-    },
-    {
       "date": "2026-11-01",
       "libelle": "Toussaint"
     },
@@ -69,12 +65,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-10-31",
-      "heure": "18:30",
-      "lieu": "Saint-Germain-sur-Ille",
-      "intentions": []
-    },
     {
       "date": "2026-11-01",
       "heure": "10:30",
@@ -221,13 +211,6 @@
       "titre": "Prière du chapelet",
       "texte": "Chaque mardi à 18 h à Sens-de-Bretagne, ouverte à tous.",
       "date_fin": "2026-12-31",
-      "source": "feuille"
-    },
-    {
-      "id": "octobre-paix",
-      "titre": "Octobre : prier pour la paix",
-      "texte": "Pendant le mois du Rosaire, le pape invite à prier le chapelet avec l'intention particulière que cessent les guerres et que la paix s'instaure entre les peuples en conflit. Chapelet le dimanche à 9 h 55 à l'église de Saint-Aubin, avant la messe.",
-      "date_fin": "2026-10-31",
       "source": "feuille"
     },
     {
