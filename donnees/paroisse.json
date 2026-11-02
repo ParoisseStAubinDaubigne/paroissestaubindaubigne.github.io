@@ -36,10 +36,6 @@
   },
   "jours": [
     {
-      "date": "2026-11-01",
-      "libelle": "Toussaint"
-    },
-    {
       "date": "2026-11-07",
       "libelle": "Messe anticipée du dimanche"
     },
@@ -65,96 +61,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-11-01",
-      "heure": "10:30",
-      "lieu": "Saint-Aubin-d'Aubigné",
-      "intentions": []
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Andouillé-Neuville",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Aubigné",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Chasné-sur-Illet",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Feins",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Gahard",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Guipel",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Montreuil-sur-Ille",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Mouazé",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Saint-Aubin-d'Aubigné",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Saint-Germain-sur-Ille",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Saint-Médard-sur-Ille",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
-    {
-      "date": "2026-11-01",
-      "heure": "15:00",
-      "lieu": "Sens-de-Bretagne",
-      "intentions": [],
-      "nature": "Célébration de la Parole suivie de la procession au cimetière"
-    },
     {
       "date": "2026-11-07",
       "heure": "18:30",
