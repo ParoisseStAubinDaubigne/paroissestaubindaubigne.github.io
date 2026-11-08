@@ -1,17 +1,17 @@
 # Site de la paroisse Saint-Aubin de l'Illet : consignes de mise à jour
 
 Ce dépôt publie le site https://paroissestaubindaubigne.github.io (GitHub Pages, branche `main`).
-Le site comprend six pages générées : `index.html` (accueil), `messes.html`, `agenda.html`,
-`vie-paroissiale.html`, `paroisse.html`, `contact.html`. **Ne jamais modifier les fichiers `.html` à la main**. On modifie
+Le site comprend sept pages générées : `index.html` (accueil), `messes.html`, `agenda.html`,
+`questions.html` (Vos questions), `vie-paroissiale.html`, `paroisse.html`, `contact.html`. **Ne jamais modifier les fichiers `.html` à la main**. On modifie
 `donnees/paroisse.json`, puis on exécute `python3 outils/construire_site.py --purger`.
 
 ## Architecture
 
 | Élément | Rôle |
 |---|---|
-| `donnees/paroisse.json` | Base de données unique : messes, jours liturgiques, annonces, événements, carnet, démarches, présentation, vie paroissiale, contact, formulaire, paramètres |
+| `donnees/paroisse.json` | Base de données unique : messes, jours liturgiques, annonces, événements, questions-réponses, carnet, démarches, présentation, vie paroissiale, contact, formulaire, paramètres |
 | `modele/page.html` | Gabarit graphique (CSS et structure) |
-| `outils/construire_site.py` | Génère les six pages ; `--purger` retire les éléments périmés |
+| `outils/construire_site.py` | Génère les sept pages ; `--purger` retire les éléments périmés |
 | `outils/preparer_image.py` | Réduit une affiche ou une photo jointe avant publication dans `images/evenements/` |
 | `outils/extraire_pieces_jointes.py` | Extrait les pièces jointes d'un message Gmail au format RAW |
 | `donnees/journal.md` | Journal des traitements (une ligne par message traité ou écarté) |
@@ -115,12 +115,21 @@ Objet : `RETIRER : <élément>` (par exemple « RETIRER : messe du 8 novembre à
 Pour une messe annulée sans remplacement, la supprimer.
 
 ### 5. Modification d'une rubrique permanente
-Objet : `MODIFIER : <rubrique>` (Présentation, Contact, Vie paroissiale, Démarches, Clochers). Corps : le
-nouveau texte ou la modification demandée.
+Objet : `MODIFIER : <rubrique>` (Présentation, Contact, Vie paroissiale, Démarches, Clochers, Questions). Corps : le
+nouveau texte ou la modification demandée. Un message `MODIFIER : Questions` indiquant que les réponses
+d'exemple sont validées fait passer toutes les entrées `"statut": "exemple"` au statut `"publiee"`.
 
-### Réponses au formulaire de contact
-Les demandes déposées par le formulaire « Vous vous interrogez sur la foi ? » ne relèvent pas de ce
-circuit : elles sont adressées directement à la personne d'accueil désignée par le curé. Un tel message
+### 6. Question et réponse
+Objet : `QUESTION : <la question, telle qu'elle doit être publiée>`. Corps : facultativement `Thème : …`
+(l'un des `themes_questions`, à défaut le plus proche), puis le texte de la réponse. Ajoute une entrée
+`questions` avec `"statut": "publiee"` et la date du jour ; une question identique ou très proche est
+remplacée. La question et la réponse sont reprises telles que rédigées par l'expéditeur, sans
+reformulation de fond ; seules les fautes de frappe évidentes sont corrigées. Retrait par
+`RETIRER : question <début de la question>`.
+
+### Réponses aux formulaires de contact et de question
+Les demandes déposées par le formulaire de contact et les questions anonymes déposées sur la page
+« Vos questions » ne relèvent pas de ce circuit : elles sont adressées directement à la personne d'accueil désignée par le curé. Un tel message
 parvenu par erreur dans la boîte du site n'est ni lu en détail ni publié : il est marqué traité et
 signalé dans le compte rendu (« demande d'accueil reçue par erreur, à réacheminer »), sans en reproduire
 le contenu.
@@ -159,4 +168,5 @@ Un lieu absent de la table est ajouté à `lieux` avec son édifice s'il est ind
 - Annonce : `{"id", "titre", "texte", "date_fin", "source": "feuille" | "mail"}`.
 - Événement : `{"id", "titre", "date", "date_fin"?, "heure"?, "lieu", "texte", "image"?, "source"}`.
 - Démarche : `{"id", "titre", "texte"}` dans `demarches`.
+- Question : `{"id", "theme", "question", "reponse", "statut": "exemple" | "publiee", "date"}` dans `questions` ; paragraphes de la réponse séparés par une ligne vide.
 - Carnet : `{"noms", "date", "lieu"}` dans `baptemes`, `mariages` ou `obseques`.

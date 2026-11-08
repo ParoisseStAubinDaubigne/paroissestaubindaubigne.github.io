@@ -8,7 +8,7 @@ Usage : python3 outils/construire_site.py [--date AAAA-MM-JJ] [--purger]
 --date    date de référence (par défaut : aujourd'hui, heure de Paris).
 
 Pages produites : index.html, messes.html, agenda.html, vie-paroissiale.html,
-paroisse.html, contact.html.
+paroisse.html, contact.html, questions.html.
 """
 import argparse
 import datetime as dt
@@ -32,6 +32,7 @@ PAGES = [
     ("index.html", "Accueil"),
     ("messes.html", "Messes"),
     ("agenda.html", "Agenda"),
+    ("questions.html", "Vos questions"),
     ("vie-paroissiale.html", "Vie paroissiale"),
     ("paroisse.html", "La paroisse"),
     ("contact.html", "Contact"),
@@ -187,7 +188,8 @@ def bloc_carnet(base):
 
 def bloc_appel(base, lien=True):
     a = base["accueil_foi"]
-    bouton = '<a class="bouton" href="contact.html#question">Poser une question</a>' if lien else ""
+    bouton = ('<div class="boutons"><a class="bouton" href="questions.html">Questions fréquentes</a>'
+              '<a class="bouton clair" href="contact.html#question">Être contacté</a></div>') if lien else ""
     return (f'<section class="bande-appel"><div class="wrap"><div class="appel">'
             f'<div><h2>{e(a["titre"])}</h2><p>{e(a["texte"])}</p></div>{bouton}</div></div></section>')
 
@@ -230,12 +232,71 @@ def bloc_formulaire(base):
             '<option>Rejoindre un service ou un groupe de la paroisse</option>'
             '<option>Autre demande</option></select></label>'
             '<label for="f-message">Votre message<textarea id="f-message" name="message" required></textarea></label>'
+            + (('<label class="case" for="f-rappel"><input type="checkbox" id="f-rappel" name="rappel">'
+                '<span>Je souhaite être rappelé par téléphone</span></label>'
+                '<label for="f-tel">Téléphone, si vous souhaitez être rappelé'
+                '<input id="f-tel" name="telephone" type="tel" autocomplete="tel"></label>')
+               if base["parametres"].get("proposer_rappel") else "") +
             '<label class="piege" for="f-site">Ne pas remplir<input id="f-site" name="_gotcha" tabindex="-1" autocomplete="off"></label>'
             '<label class="case" for="f-accord"><input type="checkbox" id="f-accord" name="accord" required>'
             "<span>J'accepte que ces informations soient utilisées par la paroisse pour répondre à ma demande.</span></label>"
             '<div><button class="bouton" type="submit">Envoyer</button></div>'
             '</div></fieldset></form>'
             f'<p class="rgpd">{rgpd}</p>')
+
+
+def bloc_formulaire_question(base):
+    f = base.get("formulaire_question", {})
+    c = base["contact"]
+    actif = f.get("actif")
+    if actif and f.get("type") == "lien" and f.get("lien"):
+        return (f'<p><a class="bouton" href="{e(f["lien"])}" target="_blank" rel="noopener">'
+                "Poser ma question</a></p>")
+    avis = "" if actif else (
+        '<p class="avis">Formulaire en cours de mise en place : l\'envoi n\'est pas encore activé. '
+        f'En attendant, l\'accueil du presbytère répond au {e(c["telephone"])}.</p>')
+    action = f' action="{e(f["adresse_envoi"])}" method="post"' if actif and f.get("adresse_envoi") else ""
+    dis = "" if actif else " disabled"
+    themes = "".join(f"<option>{e(t)}</option>" for t in base.get("themes_questions", []))
+    return (avis +
+            f'<form class="question"{action}><fieldset{dis}>'
+            '<div style="display:grid;gap:1rem">'
+            '<label for="q-question">Votre question<textarea id="q-question" name="question" required></textarea></label>'
+            f'<label for="q-theme">Thème, facultatif<select id="q-theme" name="theme"><option value="">Je ne sais pas</option>{themes}</select></label>'
+            '<label for="q-mail">Courriel, facultatif : pour être prévenu de la réponse ou recevoir une réponse personnelle'
+            '<input id="q-mail" name="email" type="email" autocomplete="email"></label>'
+            '<label class="piege" for="q-site">Ne pas remplir<input id="q-site" name="_gotcha" tabindex="-1" autocomplete="off"></label>'
+            '<div><button class="bouton" type="submit">Envoyer ma question</button></div>'
+            '</div></fieldset></form>'
+            '<p class="rgpd">Aucun nom n\'est demandé. Votre question est lue par un prêtre ou par l\'équipe d\'accueil ; '
+            'si elle peut éclairer d\'autres personnes, elle est publiée sur cette page avec sa réponse, reformulée au besoin '
+            'pour ne contenir aucun détail personnel. Une question très personnelle reçoit une réponse privée si vous avez '
+            f'laissé votre courriel, et n\'est jamais publiée. Les messages reçus sont conservés {e(f.get("conservation", "six mois"))} au plus.</p>')
+
+
+def page_questions(base, auj):
+    qs = base.get("questions", [])
+    note = base["parametres"].get("questions_note")
+    note_html = f'<p class="avis">{e(note)}</p>' if note and any(q.get("statut") == "exemple" for q in qs) else ""
+    themes = [t for t in base.get("themes_questions", []) if any(q["theme"] == t for q in qs)]
+    themes += sorted({q["theme"] for q in qs} - set(themes))
+    sommaire = " · ".join(f'<a href="#theme-{i}">{e(t)}</a>' for i, t in enumerate(themes))
+    blocs = []
+    for i, t in enumerate(themes):
+        items = "".join(
+            f'<details id="{e(q["id"])}"><summary>{e(q["question"])}</summary>'
+            + "".join(f"<p>{e(par)}</p>" for par in q["reponse"].split("\n\n"))
+            + "</details>"
+            for q in qs if q["theme"] == t)
+        blocs.append(f'<h2 id="theme-{i}">{e(t)}</h2><div class="faq">{items}</div>')
+    corps = note_html + (f'<p class="sommaire">{sommaire}</p>' if sommaire else "") + "".join(blocs)
+    return "\n".join([
+        section("questions", "Vos questions",
+                "Les questions que chacun peut se poser sur la foi, les sacrements et la vie de l'Église, "
+                "avec les réponses de la paroisse. Vous pouvez poser la vôtre, sans donner votre nom.",
+                corps, niveau=1),
+        section("poser", "Poser une question", "", bloc_formulaire_question(base)),
+    ])
 
 
 # ---------------------------------------------------------------- pages
@@ -303,6 +364,7 @@ CONSTRUCTEURS = {
     "agenda.html": (page_agenda, "Événements, concerts, temps forts et annonces de la paroisse Saint-Aubin de l'Illet."),
     "vie-paroissiale.html": (page_vie, "Baptême, mariage, obsèques, intentions de messe, services et carnet de la paroisse Saint-Aubin de l'Illet."),
     "paroisse.html": (page_paroisse, "Présentation de la paroisse Saint-Aubin de l'Illet et de ses treize clochers, doyenné de la Trinité, diocèse de Rennes."),
+    "questions.html": (page_questions, "Questions fréquentes sur la foi, le baptême, la confession, le mariage et la messe : posez votre question à la paroisse Saint-Aubin de l'Illet, même de façon anonyme."),
     "contact.html": (page_contact, "Accueil du presbytère de Saint-Aubin-d'Aubigné et formulaire pour poser une question sur la foi ou être accueilli."),
 }
 

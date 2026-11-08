@@ -10,7 +10,9 @@
       "staubindaubigne.site@gmail.com",
       "paroisse-saint-aubin-illet@orange.fr"
     ],
-    "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales et de messes.info."
+    "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales et de messes.info.",
+    "proposer_rappel": true,
+    "questions_note": "Réponses proposées à titre d'exemple, en attente de validation par le curé de la paroisse."
   },
   "mise_a_jour": {
     "date": "2026-10-24",
@@ -237,5 +239,109 @@
     "destinataire": "un membre de l'équipe d'accueil désigné par le curé",
     "delai_reponse": "sous huit jours",
     "conservation": "un an"
-  }
+  },
+  "formulaire_question": {
+    "actif": false,
+    "type": "formspree",
+    "adresse_envoi": "",
+    "lien": "",
+    "conservation": "six mois"
+  },
+  "themes_questions": [
+    "Découvrir la foi",
+    "Sacrements",
+    "Messe et prière",
+    "Étapes de la vie",
+    "S'engager dans la paroisse"
+  ],
+  "questions": [
+    {
+      "id": "je-doute-ou-je-m-interroge-sur-dieu-a-qui-en-parler",
+      "theme": "Découvrir la foi",
+      "question": "Je doute ou je m'interroge sur Dieu : à qui en parler ?",
+      "reponse": "Le doute et les questions font partie du chemin de nombreux croyants, y compris des plus fidèles. Un prêtre ou un membre de l'équipe d'accueil peut vous recevoir pour en parler librement, sans engagement de votre part. Il suffit de prendre contact avec le presbytère ou d'utiliser le formulaire de la page Contact ; vous pouvez aussi poser votre question de façon anonyme sur cette page.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "je-ne-suis-pas-croyant-puis-je-venir-a-la-messe",
+      "theme": "Découvrir la foi",
+      "question": "Je ne suis pas croyant : puis-je venir à la messe ?",
+      "reponse": "Oui. La messe est ouverte à tous, croyants ou non, pratiquants ou non. Vous pouvez simplement vous asseoir, écouter et vous joindre aux chants si vous le souhaitez. La communion est réservée aux catholiques baptisés qui s'y sont préparés ; les autres personnes peuvent rester à leur place ou s'avancer les bras croisés sur la poitrine pour recevoir une bénédiction du prêtre.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "je-ne-suis-pas-baptise-comment-le-devenir-a-l-age-adulte",
+      "theme": "Sacrements",
+      "question": "Je ne suis pas baptisé : comment le devenir à l'âge adulte ?",
+      "reponse": "Un adulte se prépare au baptême dans le cadre du catéchuménat : un cheminement personnel, accompagné par un membre de la communauté, qui dure en général environ deux ans et s'adapte au rythme de chacun. Le baptême, la confirmation et la première communion sont le plus souvent reçus ensemble, lors de la veillée pascale. La première étape consiste à prendre contact avec l'accueil du presbytère.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "mon-enfant-n-a-pas-ete-baptise-petit-est-il-trop-tard",
+      "theme": "Sacrements",
+      "question": "Mon enfant n'a pas été baptisé petit : est-il trop tard ?",
+      "reponse": "Il n'est jamais trop tard. Un enfant en âge scolaire peut être baptisé après une préparation adaptée à son âge, souvent menée en lien avec le catéchisme. Les parents prennent contact avec l'accueil du presbytère, qui les oriente.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "je-n-ai-pas-ete-confirme-est-ce-encore-possible-a-l-age-adul",
+      "theme": "Sacrements",
+      "question": "Je n'ai pas été confirmé : est-ce encore possible à l'âge adulte ?",
+      "reponse": "Oui. Une préparation à la confirmation est proposée aux adultes ; le sacrement est ensuite célébré par l'évêque ou par son délégué. L'accueil du presbytère indique les dates et les modalités de la prochaine préparation.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "comment-se-confesser",
+      "theme": "Sacrements",
+      "question": "Comment se confesser ?",
+      "reponse": "Le sacrement de la réconciliation se reçoit auprès d'un prêtre, sur rendez-vous pris auprès du presbytère, ou lors des temps de confession annoncés, notamment avant Noël et Pâques. Aucune formule n'est à connaître par cœur : le prêtre accompagne la démarche. Ce qui est dit en confession est couvert par le secret absolu.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "peut-on-se-marier-a-l-eglise-si-l-un-des-deux-n-est-pas-bapt",
+      "theme": "Étapes de la vie",
+      "question": "Peut-on se marier à l'église si l'un des deux n'est pas baptisé ?",
+      "reponse": "Oui. L'Église célèbre le mariage entre une personne catholique et une personne non baptisée ou d'une autre confession, après une autorisation que le prêtre demande à l'évêché. Dans tous les cas, les fiancés suivent une préparation au mariage. Il est conseillé de prendre contact avec le presbytère au moins un an avant la date envisagée.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "un-proche-vient-de-deceder-que-faire",
+      "theme": "Étapes de la vie",
+      "question": "Un proche vient de décéder : que faire ?",
+      "reponse": "L'entreprise de pompes funèbres prend contact avec la paroisse pour fixer la date de la célébration. Une équipe d'accompagnement des familles en deuil rencontre ensuite les proches pour préparer les obsèques avec eux. Des obsèques à l'église peuvent être demandées pour un défunt baptisé, même peu pratiquant ; dans les autres situations, le prêtre examine la demande avec la famille.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "comment-faire-celebrer-une-messe-pour-un-defunt-ou-une-inten",
+      "theme": "Messe et prière",
+      "question": "Comment faire célébrer une messe pour un défunt ou une intention ?",
+      "reponse": "L'intention se dépose à l'accueil du presbytère, aux heures d'ouverture, en précisant si possible la date et le lieu souhaités. Une offrande est demandée selon le montant indicatif fixé par le diocèse. L'intention est ensuite annoncée sur la feuille paroissiale et sur ce site.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "je-ne-sais-pas-prier-par-ou-commencer",
+      "theme": "Messe et prière",
+      "question": "Je ne sais pas prier : par où commencer ?",
+      "reponse": "Prier commence simplement : quelques minutes de silence, une parole adressée à Dieu avec ses propres mots, le Notre Père ou la lecture d'un passage de l'Évangile. Prier avec d'autres aide souvent à commencer ; la paroisse propose des temps de prière, comme le chapelet, annoncés sur la page Agenda.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    },
+    {
+      "id": "je-voudrais-rendre-service-dans-la-paroisse-comment-faire",
+      "theme": "S'engager dans la paroisse",
+      "question": "Je voudrais rendre service dans la paroisse : comment faire ?",
+      "reponse": "Toute aide est bienvenue, quel que soit le temps disponible : accueil, chorale, catéchisme, accompagnement des familles en deuil, entretien et fleurissement des églises, service du panier du curé. Il suffit de se signaler à l'accueil du presbytère ou par le formulaire de la page Contact.",
+      "statut": "exemple",
+      "date": "2026-11-08"
+    }
+  ]
 }

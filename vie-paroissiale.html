@@ -143,6 +143,19 @@ form.question .piege{position:absolute;left:-9999px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 fieldset[disabled]{opacity:.6}
 .avis{background:var(--blue-soft);border-left:3px solid var(--gold);padding:.7rem 1rem;font-size:.93rem;color:var(--ink);margin:0 0 1.2rem;max-width:40rem}
+.boutons{display:flex;flex-wrap:wrap;gap:.6rem}
+.appel a.bouton.clair{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #dfe5ef}
+.sommaire{font-size:.95rem;margin:0 0 1.4rem}
+.faq{display:grid;gap:.5rem;margin-bottom:1.6rem}
+.faq details{background:var(--paper);border:1px solid var(--line)}
+section:nth-of-type(even) .faq details{background:var(--bg)}
+.faq summary{cursor:pointer;padding:.75rem 1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-weight:700;font-size:1.2rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 1rem .8rem;color:var(--muted);max-width:42em}
+.faq details[open] summary{border-bottom:1px solid var(--line);margin-bottom:.7rem}
+#questions h2{font-size:1.25rem;margin:1.4rem 0 .6rem}
 .rgpd{font-size:.85rem;color:var(--muted);max-width:40rem;margin:.6rem 0 0}
 </style>
 </head>
@@ -154,6 +167,7 @@ fieldset[disabled]{opacity:.6}
     <a href="index.html">Accueil</a>
     <a href="messes.html">Messes</a>
     <a href="agenda.html">Agenda</a>
+    <a href="questions.html">Vos questions</a>
     <a href="vie-paroissiale.html" aria-current="page">Vie paroissiale</a>
     <a href="paroisse.html">La paroisse</a>
     <a href="contact.html">Contact</a>

@@ -143,6 +143,19 @@ form.question .piege{position:absolute;left:-9999px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 fieldset[disabled]{opacity:.6}
 .avis{background:var(--blue-soft);border-left:3px solid var(--gold);padding:.7rem 1rem;font-size:.93rem;color:var(--ink);margin:0 0 1.2rem;max-width:40rem}
+.boutons{display:flex;flex-wrap:wrap;gap:.6rem}
+.appel a.bouton.clair{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #dfe5ef}
+.sommaire{font-size:.95rem;margin:0 0 1.4rem}
+.faq{display:grid;gap:.5rem;margin-bottom:1.6rem}
+.faq details{background:var(--paper);border:1px solid var(--line)}
+section:nth-of-type(even) .faq details{background:var(--bg)}
+.faq summary{cursor:pointer;padding:.75rem 1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-weight:700;font-size:1.2rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 1rem .8rem;color:var(--muted);max-width:42em}
+.faq details[open] summary{border-bottom:1px solid var(--line);margin-bottom:.7rem}
+#questions h2{font-size:1.25rem;margin:1.4rem 0 .6rem}
 .rgpd{font-size:.85rem;color:var(--muted);max-width:40rem;margin:.6rem 0 0}
 </style>
 </head>
@@ -154,6 +167,7 @@ fieldset[disabled]{opacity:.6}
     <a href="index.html">Accueil</a>
     <a href="messes.html">Messes</a>
     <a href="agenda.html">Agenda</a>
+    <a href="questions.html">Vos questions</a>
     <a href="vie-paroissiale.html">Vie paroissiale</a>
     <a href="paroisse.html">La paroisse</a>
     <a href="contact.html" aria-current="page">Contact</a>
@@ -161,7 +175,7 @@ fieldset[disabled]{opacity:.6}
 </nav>
 <main>
 <section id="contact"><div class="wrap"><h1>Contact et accueil</h1><div class="contact"><div><h3>Accueil au presbytère</h3><p>Lundi, mardi, mercredi et vendredi, de 10 h à 12 h</p></div><div><h3>Adresse</h3><p class="val">9 rue du Château d&#x27;Eau<br>35250 Saint-Aubin-d&#x27;Aubigné</p></div><div><h3>Téléphone et courriel</h3><p><span class="val">02 99 55 21 50</span><br><span class="val">paroisse-saint-aubin-illet@orange.fr</span></p></div></div></div></section>
-<section id="question"><div class="wrap"><h2>Vous vous interrogez sur la foi ?</h2><p class="lede">Une question sur Dieu, sur l&#x27;Église, le désir de demander un sacrement ou simplement d&#x27;être écouté : un membre de la paroisse vous répond et peut vous recevoir.</p><p class="avis">Formulaire en cours de mise en place : l'envoi n'est pas encore activé. En attendant, l'accueil du presbytère répond au 02 99 55 21 50.</p><form class="question"><fieldset disabled><div style="display:grid;gap:1rem"><label for="f-prenom">Prénom<input id="f-prenom" name="prenom" autocomplete="given-name" required></label><label for="f-contact">Courriel ou téléphone, pour vous répondre<input id="f-contact" name="contact" autocomplete="email" required></label><label for="f-objet">Votre demande<select id="f-objet" name="objet"><option>Une question sur la foi ou sur l'Église</option><option>Demander un sacrement (baptême, confirmation, mariage, réconciliation)</option><option>Rencontrer un prêtre</option><option>Rejoindre un service ou un groupe de la paroisse</option><option>Autre demande</option></select></label><label for="f-message">Votre message<textarea id="f-message" name="message" required></textarea></label><label class="piege" for="f-site">Ne pas remplir<input id="f-site" name="_gotcha" tabindex="-1" autocomplete="off"></label><label class="case" for="f-accord"><input type="checkbox" id="f-accord" name="accord" required><span>J'accepte que ces informations soient utilisées par la paroisse pour répondre à ma demande.</span></label><div><button class="bouton" type="submit">Envoyer</button></div></div></fieldset></form><p class="rgpd">Votre message est lu uniquement par un membre de l&#x27;équipe d&#x27;accueil désigné par le curé, qui vous répond sous huit jours. Il est conservé un an au plus, puis supprimé ; il n'est ni publié ni transmis à des tiers. Vous pouvez demander à tout moment l'accès à vos données ou leur effacement auprès du presbytère.</p></div></section>
+<section id="question"><div class="wrap"><h2>Vous vous interrogez sur la foi ?</h2><p class="lede">Une question sur Dieu, sur l&#x27;Église, le désir de demander un sacrement ou simplement d&#x27;être écouté : un membre de la paroisse vous répond et peut vous recevoir.</p><p class="avis">Formulaire en cours de mise en place : l'envoi n'est pas encore activé. En attendant, l'accueil du presbytère répond au 02 99 55 21 50.</p><form class="question"><fieldset disabled><div style="display:grid;gap:1rem"><label for="f-prenom">Prénom<input id="f-prenom" name="prenom" autocomplete="given-name" required></label><label for="f-contact">Courriel ou téléphone, pour vous répondre<input id="f-contact" name="contact" autocomplete="email" required></label><label for="f-objet">Votre demande<select id="f-objet" name="objet"><option>Une question sur la foi ou sur l'Église</option><option>Demander un sacrement (baptême, confirmation, mariage, réconciliation)</option><option>Rencontrer un prêtre</option><option>Rejoindre un service ou un groupe de la paroisse</option><option>Autre demande</option></select></label><label for="f-message">Votre message<textarea id="f-message" name="message" required></textarea></label><label class="case" for="f-rappel"><input type="checkbox" id="f-rappel" name="rappel"><span>Je souhaite être rappelé par téléphone</span></label><label for="f-tel">Téléphone, si vous souhaitez être rappelé<input id="f-tel" name="telephone" type="tel" autocomplete="tel"></label><label class="piege" for="f-site">Ne pas remplir<input id="f-site" name="_gotcha" tabindex="-1" autocomplete="off"></label><label class="case" for="f-accord"><input type="checkbox" id="f-accord" name="accord" required><span>J'accepte que ces informations soient utilisées par la paroisse pour répondre à ma demande.</span></label><div><button class="bouton" type="submit">Envoyer</button></div></div></fieldset></form><p class="rgpd">Votre message est lu uniquement par un membre de l&#x27;équipe d&#x27;accueil désigné par le curé, qui vous répond sous huit jours. Il est conservé un an au plus, puis supprimé ; il n'est ni publié ni transmis à des tiers. Vous pouvez demander à tout moment l'accès à vos données ou leur effacement auprès du presbytère.</p></div></section>
 </main>
 <footer>
   <div class="wrap">
