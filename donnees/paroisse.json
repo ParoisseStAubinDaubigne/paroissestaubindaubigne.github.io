@@ -36,10 +36,6 @@
   },
   "jours": [
     {
-      "date": "2026-11-07",
-      "libelle": "Messe anticipée du dimanche"
-    },
-    {
       "date": "2026-11-08",
       "libelle": "32e dimanche du temps ordinaire"
     },
@@ -61,12 +57,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-11-07",
-      "heure": "18:30",
-      "lieu": "Saint-Médard-sur-Ille",
-      "intentions": []
-    },
     {
       "date": "2026-11-08",
       "heure": "09:00",
