@@ -401,7 +401,8 @@ def main():
                       '<div class="eyebrow">Diocèse de Rennes · Doyenné de la Trinité</div>'
                       f'<a class="site" href="index.html">{e(nom)}</a></div></header>')
             titre = f"{libelle} · {nom}"
-        page = (modele.replace("{{TITRE}}", e(titre))
+        robots = "" if base["parametres"].get("indexation", True) else '<meta name="robots" content="noindex, nofollow">\n'
+        page = (modele.replace("{{ROBOTS}}", robots).replace("{{TITRE}}", e(titre))
                       .replace("{{DESCRIPTION}}", e(description))
                       .replace("{{BANDEAU}}", bandeau_html)
                       .replace("{{ENTETE}}", entete)

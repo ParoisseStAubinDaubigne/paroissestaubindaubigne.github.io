@@ -12,7 +12,8 @@
     ],
     "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales et de messes.info.",
     "proposer_rappel": true,
-    "questions_note": "Réponses proposées à titre d'exemple, en attente de validation par le curé de la paroisse."
+    "questions_note": "Réponses proposées à titre d'exemple, en attente de validation par le curé de la paroisse.",
+    "indexation": false
   },
   "mise_a_jour": {
     "date": "2026-10-24",
