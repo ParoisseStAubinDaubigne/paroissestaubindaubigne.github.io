@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Paroisse Saint-Aubin de l'Illet (Saint-Aubin-d'Aubigné, diocèse de Rennes) : horaires des messes, annonces, carnet paroissial et contacts.">
-<title>Paroisse Saint-Aubin de l'Illet</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<title>{{TITRE}}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -95,35 +95,71 @@ footer{background:var(--blue);color:#f0f2f6}
 footer .wrap{padding-block:1.6rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between}
 footer a{color:#f0f2f6}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* ---- en-tête et navigation multipages ---- */
+header.hero.petit .wrap{padding-block:1.1rem 1rem}
+header.hero .site{font-family:var(--display);font-size:1.35rem;font-weight:600;color:var(--blue);margin:.15rem 0 0;text-decoration:none;display:inline-block}
+nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:6px}
+main h1{font-family:var(--display);font-size:clamp(1.7rem,4.5vw,2.3rem);color:var(--blue);margin:0 0 .9rem;font-weight:600}
+@media (max-width:640px){nav .wrap{flex-wrap:wrap;white-space:normal;overflow:visible;gap:.35rem 1.1rem}}
+/* ---- accueil ---- */
+.deux{display:grid;gap:2rem;grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+@media (max-width:760px){.deux{grid-template-columns:minmax(0,1fr)}}
+.deux > div{min-width:0}
+.voir{display:inline-block;margin-top:.8rem;font-weight:600}
+.appel{background:var(--blue);color:#f3f5f9;padding:1.6rem 1.5rem;display:grid;gap:.4rem 2rem;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.appel h2{color:#fff;margin:0}
+.appel p{margin:0;color:#dfe5ef;max-width:38em}
+.appel a.bouton{background:var(--gold);color:#fff}
+@media (max-width:640px){.appel{grid-template-columns:minmax(0,1fr)}}
+a.bouton,button.bouton{display:inline-block;background:var(--blue);color:#fff;font:600 1rem var(--body);padding:.65rem 1.2rem;border:0;text-decoration:none;cursor:pointer;white-space:nowrap}
+a.bouton:focus-visible,button.bouton:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+/* ---- agenda ---- */
+.evts{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.evt{display:grid;grid-template-columns:4.6rem minmax(0,1fr);gap:1rem;background:var(--paper);border:1px solid var(--line);padding:1rem}
+section:nth-of-type(even) .evt{background:var(--bg)}
+.evt .cal{text-align:center;border:1px solid var(--line);background:var(--blue-soft);padding:.35rem 0;line-height:1.1;height:max-content}
+.evt .cal b{display:block;font-family:var(--display);font-size:1.7rem;color:var(--blue)}
+.evt .cal span{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.evt h3{margin:0 0 .2rem;font-size:1.12rem}
+.evt .quand{margin:0 0 .35rem;font-size:.93rem;color:var(--gold);font-weight:600}
+.evt p{margin:0;color:var(--muted);font-size:.95rem}
+.evt img{display:block;margin-top:.7rem;max-height:340px;width:auto}
+.vide{color:var(--muted);font-style:italic}
+/* ---- démarches ---- */
+.demarches{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:0;padding:0;list-style:none}
+.demarches li{border-top:3px solid var(--gold);background:var(--paper);padding:1rem 1.1rem}
+section:nth-of-type(even) .demarches li{background:var(--bg)}
+.demarches h3{margin:0 0 .3rem;font-size:1.1rem}
+.demarches p{margin:0;font-size:.95rem;color:var(--muted)}
+/* ---- formulaire ---- */
+form.question{display:grid;gap:1rem;max-width:40rem}
+form.question label{display:grid;gap:.3rem;font-weight:600;font-size:.95rem}
+form.question input,form.question select,form.question textarea{font:inherit;font-weight:400;padding:.55rem .7rem;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:100%}
+form.question textarea{min-height:9rem;resize:vertical}
+form.question .case{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.9rem;color:var(--muted)}
+form.question .case input{width:auto;margin-top:.3rem}
+form.question .piege{position:absolute;left:-9999px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+fieldset[disabled]{opacity:.6}
+.avis{background:var(--blue-soft);border-left:3px solid var(--gold);padding:.7rem 1rem;font-size:.93rem;color:var(--ink);margin:0 0 1.2rem;max-width:40rem}
+.rgpd{font-size:.85rem;color:var(--muted);max-width:40rem;margin:.6rem 0 0}
 </style>
 </head>
 <body>
 {{BANDEAU}}
-
-<header class="hero">
+{{ENTETE}}
+<nav aria-label="Menu principal">
   <div class="wrap">
-    <div class="eyebrow">Diocèse de Rennes · Doyenné de la Trinité</div>
-    <h1>Paroisse Saint-Aubin de l'Illet</h1>
-    <p>{{ACCROCHE}}</p>
-  </div>
-</header>
-
-<nav>
-  <div class="wrap">
-    <a href="#messes">Messes</a>
-    <a href="#annonces">Annonces</a>
-    {{NAV_CARNET}}
-    <a href="#paroisse">La paroisse</a>
-    <a href="#vie">Vie paroissiale</a>
-    <a href="#contact">Contact</a>
+{{NAV}}
   </div>
 </nav>
-
-{{SECTIONS}}
-
+<main>
+{{CONTENU}}
+</main>
 <footer>
   <div class="wrap">
-    <div>Paroisse Saint-Aubin de l'Illet · Diocèse de Rennes</div>
+    <div>Paroisse Saint-Aubin de l'Illet · Diocèse de Rennes · 9 rue du Château d'Eau, 35250 Saint-Aubin-d'Aubigné</div>
     <div>Mis à jour le {{DATE_MAJ}}</div>
   </div>
 </footer>

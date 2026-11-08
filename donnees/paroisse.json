@@ -10,7 +10,7 @@
       "staubindaubigne.site@gmail.com",
       "paroisse-saint-aubin-illet@orange.fr"
     ],
-    "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales d'octobre 2026 et de messes.info."
+    "bandeau": "Projet de site soumis à la validation de la paroisse : contenus d'exemple issus des feuilles paroissiales et de messes.info."
   },
   "mise_a_jour": {
     "date": "2026-10-24",
@@ -191,5 +191,51 @@
     "adresse": "9 rue du Château d'Eau, 35250 Saint-Aubin-d'Aubigné",
     "telephone": "02 99 55 21 50",
     "courriel": "paroisse-saint-aubin-illet@orange.fr"
+  },
+  "evenements": [
+    {
+      "id": "armistice-2026",
+      "titre": "Messe de commémoration de l'Armistice",
+      "date": "2026-11-11",
+      "heure": "10:00",
+      "lieu": "Sens-de-Bretagne",
+      "texte": "Messe célébrée à l'église Saint-Sulpice à l'occasion de l'anniversaire de l'Armistice du 11 novembre 1918.",
+      "source": "feuille"
+    }
+  ],
+  "accueil_foi": {
+    "titre": "Vous vous interrogez sur la foi ?",
+    "texte": "Une question sur Dieu, sur l'Église, le désir de demander un sacrement ou simplement d'être écouté : un membre de la paroisse vous répond et peut vous recevoir."
+  },
+  "demarches": [
+    {
+      "id": "bapteme",
+      "titre": "Demander le baptême",
+      "texte": "Pour un enfant ou pour un adulte, prendre contact avec l'accueil du presbytère plusieurs mois à l'avance : une préparation est proposée avant la célébration."
+    },
+    {
+      "id": "mariage",
+      "titre": "Se marier à l'église",
+      "texte": "Prendre contact avec l'accueil du presbytère au moins un an avant la date envisagée, afin d'engager la préparation au mariage."
+    },
+    {
+      "id": "obseques",
+      "titre": "Préparer des obsèques",
+      "texte": "L'entreprise de pompes funèbres prend contact avec la paroisse ; une équipe d'accompagnement rencontre la famille pour préparer la célébration."
+    },
+    {
+      "id": "intention",
+      "titre": "Demander une messe",
+      "texte": "Une intention de messe, pour un défunt ou une intention particulière, se dépose à l'accueil du presbytère ; elle est ensuite annoncée sur la feuille paroissiale."
+    }
+  ],
+  "formulaire": {
+    "actif": false,
+    "type": "formspree",
+    "adresse_envoi": "",
+    "lien": "",
+    "destinataire": "un membre de l'équipe d'accueil désigné par le curé",
+    "delai_reponse": "sous huit jours",
+    "conservation": "un an"
   }
 }
