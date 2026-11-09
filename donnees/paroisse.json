@@ -39,10 +39,6 @@
   },
   "jours": [
     {
-      "date": "2026-11-08",
-      "libelle": "32e dimanche du temps ordinaire"
-    },
-    {
       "date": "2026-11-11",
       "libelle": "Armistice"
     },
@@ -60,18 +56,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-11-08",
-      "heure": "09:00",
-      "lieu": "Feins",
-      "intentions": []
-    },
-    {
-      "date": "2026-11-08",
-      "heure": "10:30",
-      "lieu": "Saint-Aubin-d'Aubigné",
-      "intentions": []
-    },
     {
       "date": "2026-11-11",
       "heure": "10:00",
