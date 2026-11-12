@@ -10,3 +10,4 @@
 | 2026-11-08 | (automatique) | Aucun message (notification Google écartée) | Purge : messe anticipée du 07/11 à Saint-Médard-sur-Ille et jour liturgique du 07/11 retirés |
 | 2026-11-09 | (automatique) | Aucun message | Purge : messes du 08/11 (9 h à Feins, 10 h 30 à Saint-Aubin-d'Aubigné) et jour liturgique du 08/11 retirés |
 | 2026-11-11 | no-reply@accounts.google.com | Google a mis à jour vos paramètres | Notification automatique écartée, marquée traitée ; aucune modification du site (rien de périmé) |
+| 2026-11-12 | (automatique) | Aucun message | Purge : messe de commémoration de l'Armistice du 11/11 à Sens-de-Bretagne (messe et événement) et jour liturgique du 11/11 retirés |

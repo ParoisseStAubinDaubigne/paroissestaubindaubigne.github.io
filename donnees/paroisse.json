@@ -39,10 +39,6 @@
   },
   "jours": [
     {
-      "date": "2026-11-11",
-      "libelle": "Armistice"
-    },
-    {
       "date": "2026-11-14",
       "libelle": "Messe anticipée du dimanche"
     },
@@ -56,13 +52,6 @@
     }
   ],
   "messes": [
-    {
-      "date": "2026-11-11",
-      "heure": "10:00",
-      "lieu": "Sens-de-Bretagne",
-      "intentions": [],
-      "nature": "Messe de commémoration de l'Armistice"
-    },
     {
       "date": "2026-11-14",
       "heure": "18:30",
@@ -179,17 +168,7 @@
     "telephone": "02 99 55 21 50",
     "courriel": "paroisse-saint-aubin-illet@orange.fr"
   },
-  "evenements": [
-    {
-      "id": "armistice-2026",
-      "titre": "Messe de commémoration de l'Armistice",
-      "date": "2026-11-11",
-      "heure": "10:00",
-      "lieu": "Sens-de-Bretagne",
-      "texte": "Messe célébrée à l'église Saint-Sulpice à l'occasion de l'anniversaire de l'Armistice du 11 novembre 1918.",
-      "source": "feuille"
-    }
-  ],
+  "evenements": [],
   "accueil_foi": {
     "titre": "Vous vous interrogez sur la foi ?",
     "texte": "Une question sur Dieu, sur l'Église, le désir de demander un sacrement ou simplement d'être écouté : un membre de la paroisse vous répond et peut vous recevoir."
